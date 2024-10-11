@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/6235e3a363.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>SPEEDY</title>
+    <link rel="icon" href="img/logo-title.png" type="image/icon type">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        header {
+            width: 100%;
+            height: 120px;
+        }
+
+        header .top-head {
+            height: 30px;
+            width: 100%;
+            background-color: #fd831f;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 2px 5px;
+        }
+
+        header .bottom-head {
+            height: 80%;
+            width: 100%;
+            background-color: #f1f1f1;
+        }
+
+        /*navbar css*/
+
+
+        nav {
+
+            font-size: 15px;
+            color: black;
+            height: 100%;
+            width: 100%;
+            text-align: end;
+            padding-right: 100px;
+
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 50px
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(12, 12, 12);
+            margin: 10px 15px;
+            padding: 6px;
+        }
+
+        nav ul li a:hover {
+
+            color: #fd831f;
+            border-radius: 1px;
+        }
+
+        input {
+            margin: 12px;
+            height: 25px;
+            border-radius: 5px;
+        }
+
+        label {
+            font-size: 20px;
+            margin-top: 15px;
+        }
+
+        .navbar-li {
+            line-height: 100px;
+
+        }
+
+        .sidebar {
+            background-color: #ffffff;
+            color: black;
+            width: 300px;
+            height: 62vh;
+            position: fixed;
+            top: 32px;
+            right: -500px;
+            border-radius: 5px;
+            transition: 0.6s ease-in-out;
+            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
+
+        .sidebar li a {
+            color: black;
+        }
+
+        .sedebar-li {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .sedebar-li a {
+            width: 100%;
+            text-align: center;
+            margin: 10px 0px;
+        }
+
+        .menu-btn {
+
+            cursor: pointer;
+            margin: 20px;
+
+        }
+
+        .menubtn-1 {
+
+            display: none;
+        }
+
+        .logo {
+            height: 150px;
+            width: 200px;
+            position: absolute;
+            left: 8vw;
+            top: 7px
+        }
+
+        .logo img {
+            height: 150px;
+            width: 200px;
+        }
+
+        @media(max-width: 800px) {
+            nav {
+                padding-right: 0px;
+            }
+
+            .menu-btn {
+                display: inline-block;
+            }
+
+            .menubtn-1 {
+                margin: 40px;
+
+            }
+
+            .navbar-li {
+                display: none;
+            }
+        }
+
+        /*navbar css end*/
+        .section{
+            background-image: url(img/aboutUS.jpg);
+            background-position: center;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            top: 0px;
+            background-size: cover;
+            z-index: -1;
+        }
+        .hero-section-slogan{
+            height: 80vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        @keyframes text-animation {
+  0%   {margin-top: 250px; display: none;}
+  50%   {margin-top: 200px; display: none;}
+  75%   {margin-top: 150px; display: block;}
+ 
+  100% {margin-top: 0px; display: block;}
+}
+
+/* The element to apply the animation to */
+ .text{
+    animation-name: text-animation;
+    animation-duration: 1.5s;
+
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px;
+    flex-direction: column;
+    background-color: white;
+    text-align: center;
+    
+}
+.main .h1{
+   
+    color: #fd831f;
+    margin: 0px;
+}
+.main .buttn{
+ 
+    width: 100px;
+    border: none;
+    height: 5px;
+    background-color: #fd831f;
+    border-radius: 10px;
+}
+.main-1-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0px 20px ;
+   
+}
+.txt1,.img1{
+    
+    padding: 70px 10px;
+    width: 40%;
+    text-align: start;
+    
+    margin-bottom: 100px;
+}
+.img1{
+    max-width: 500px;
+}
+.icon-text-flex{
+    width: 100%;
+    display: flex;
+   
+
+}
+.icon-text-flex a{
+    color: #fd831f;
+}
+.icon-text-flex a:hover{
+    color: gray;
+}
+.icf1,.icf2{
+    width: 50%;
+    padding: 10px;
+}
+
+   
+    .main-2-section{
+        background-color: rgba(27, 25, 25, 1);
+        width: 100%;
+        padding: 100px 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: start;
+
+    } 
+    .main-2-section-grid1,.main-2-section-grid2,.main-2-section-grid3{
+  
+    padding: 20px 30px; 
+    margin: 10px 20px;   
+    }
+     .main-3-section{
+        
+        width: 100%;
+      padding: 50px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        text-align: start;
+     }
+      .main-3-section-grid1,.main-3-section-grid2,.main-3-section-grid3{
+
+    padding: 20px 10px; 
+    margin: 10px 10px;   
+  
+ 
+    width: 27%;
+    }
+       .main-3-section-grid1 img,.main-3-section-grid2 img,.main-3-section-grid3 img{
+        width: 100%;
+        height: 350px;
+      
+        border-radius: 3px;
+        
+       } 
+        @media (max-width:900px) {
+        .main-1-section{
+            flex-direction: column-reverse;
+        }
+        .main-2-section{
+            flex-direction: column;
+        }
+        .main-3-section{
+            flex-direction: column;
+        }
+        .txt1,.img1{
+            width: 80%;
+            margin: 50px 0px;
+        }
+        .main-3-section-grid1,.main-3-section-grid2,.main-3-section-grid3{
+            width: 80%;
+        }
+    }  
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-head">
+            <div class="phone-head">
+                <p><i class="fa-solid fa-phone"></i>+923062545569</p>
+            </div>
+            <div class="icon-head">
+
+                <p><i class=" fa-brands fa-facebook" style="color: #ffffff;"></i>
+                    <i class=" fa-brands fa-instagram"></i>
+                    <i class=" fa-brands fa-linkedin"></i>
+                </p>
+            </div>
+        </div>
+        <div class="bottom-head">
+            <nav>
+                <ul>
+                    <li>
+                        <div class="logo"><img src="img/logo.png" alt="">
+                    </li>
+                    <li class="navbar-li"><a href="index.html" >HOME</a></li>
+                    <li class="navbar-li"><a href="blog.html">BLOG</a></li>
+                    <li class="navbar-li"><a href="aboutus.html"style="color:#fd831f;">ABOUT US</a></li>
+                    <li class="navbar-li"><a href="contactus.html">CONTACT US</a></li>
+                    <label for="click" class="menu-btn menubtn-1" onclick="show()"><i
+                            class="fa-solid fa-bars bar"></i></label>
+                </ul>
+                <ul class="sidebar">
+                    <label for="click" class="menu-btn menubtn-2 " onclick="hide()"><i
+                            class="fa-solid fa-xmark xmark"></i></label>
+                    <li class="sedebar-li"><a href="index.html">HOME</a></li>
+                    <li class="sedebar-li"><a href="blog.html">BLOG</a></li>
+                    <li class="sedebar-li"><a href="aboutus.html">ABOUT US</a></li>
+                    <li class="sedebar-li"><a href="contactus.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        
+        <div class="section">
+        </div>
+      <div class="hero-section-slogan">
+        <div class="text">
+            <h1 style="color: white; font-weight: 800; font-size: 60px;">ABOUT US</h1>
+            <p style="color:#f1f1f1; font-size: 15px; text-align: center; font-weight: 100;"><span style="color: #fd831f;">Home</span> > About Us</p>
+        </div>
+      </div>      
+    </section>
+   <main class="main">
+    <div class="main-1-section">
+        <div class="txt1">
+            <h1 class="h1">Our History</h1>
+                <button class="buttn" style=" margin-left: 30px; "></button><br><br>
+                <p>Speedy is a full-service Third-Party Logistics (3PL) provider. We provide our clients with accurate, reliable and time definite logistics.
+                Our high-quality services and strong customer service approach  helps our clients identify and increase efficiencies, reduce waste 
+                  and manage cost while capturing and delivering quantifiable and  sustainable value, <br><br>
+
+                <b>  “Intizar kis baat ka hai Jab Speedy sath hai” </b> <br>
+                Our day to day life contemplates a bundle of affairs that fall behind  and they are never on time. Consequently, it triggers 
+                disappointment and annoyance. In the midst of experiencing  discontentment and delays we have Speedy for you! Committed to 
+                 deliver your parcels promptly. So, we promise you to never keep you  waiting.</p>
+    <div class="icon-text-flex">
+        <div class="icf1">
+            <i class="fa-solid fa-truck-front" style="font-size: 50px; color: #fd831f; margin: 20px 5px;"></i>
+            <h4>Ground Shipping</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis.</p>
+            <a href="" style="text-decoration: none; ">Learn More</a>
+        </div>
+        <div class="icf2">
+            <i class="fa-solid fa-plane-departure" style="font-size: 50px; color: #fd831f;margin: 20px 5px;"></i>
+            <h4>Air Freight</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis.</p>
+            <a href="" style="text-decoration: none; ">Learn More</a>
+        </div>
+    </div>    
+    </div>
+        <div class="img1">
+            <img src="img/img_1.jpg" alt="" style="width: 100%; height: 100%; min-height: 500px;">
+        </div>
+    </div>
+    <div class="main-2-section-slogan" style="background-color: rgba(27, 25, 25, 1); width: 100%; padding-top: 100px;">  <h1 class="h1">HOW IT WORKS</h1>
+        <button class="buttn" style=" margin-left: 30px; "></button>
+    </div>
+    <div class="main-2-section">
+        
+        <div class="main-2-section-grid1"> 
+            <span style="background-color: #fd831f; font-size: 30px; padding: 10px 20px; border-radius: 30px;" >1</span>
+            <h5 style="margin-top: 50px;">Choose Your Service</h5><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium dicta consectetur 
+                fuga neque fugit a at. Cum quod vero assumenda iusto.</p><br><br>
+                <p>✔ Error minus sint nobis dolor</p>
+                <p>✔ Voluptatum porro expedita labore esse</p>
+                <p>✔ Voluptas unde sit pariatur earum</p>
+        </div>
+        <div class="main-2-section-grid2"> 
+            <span style="background-color: #fd831f; font-size: 30px; padding: 10px 20px; border-radius: 30px;" >2</span>
+            <h5 style="margin-top: 50px;">Select Your Payment</h5><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium dicta consectetur 
+                fuga neque fugit a at. Cum quod vero assumenda iusto.</p><br><br>
+                <p>✔ Error minus sint nobis dolor</p>
+                <p>✔ Voluptatum porro expedita labore esse</p>
+                <p>✔ Voluptas unde sit pariatur earum</p>
+        </div>
+        <div class="main-2-section-grid3"> 
+            <span style="background-color: #fd831f; font-size: 30px; padding: 10px 20px; border-radius: 30px;" >3</span>
+            <h5 style="margin-top: 50px;">Tracking Your Order</h5><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium dicta consectetur 
+                fuga neque fugit a at. Cum quod vero assumenda iusto.</p><br><br>
+                <p>✔ Error minus sint nobis dolor</p>
+                <p>✔ Voluptatum porro expedita labore esse</p>
+                <p>✔ Voluptas unde sit pariatur earum</p>
+        </div>
+    </div>
+    
+      <h1 class="h1" style="margin-top: 150px; font-size: 35px;" > <b> OUR TEAM</b></h1>
+                <button class="buttn" style=" margin-left: 25px; "></button>
+    <div class="main-3-section">
+        <div class="main-3-section-grid1"> 
+            <img src="img/person_3.jpg" alt="">
+            <h3>Christine Rooster</h3>
+            <p>Co-Founder, President</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Nisi at consequatur unde molestiae quidem provident voluptatum 
+                 deleniti quo iste error eos est praesentium distinctio cupiditate 
+                 tempore suscipit inventore deserunt tenetur.</p>
+        </div>
+        <div class="main-3-section-grid2"> 
+            <img src="img/person_1.jpg" alt="">
+            <h3>John smith</h3>
+            <p>Co-Founder, President</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Nisi at consequatur unde molestiae quidem provident voluptatum 
+                 deleniti quo iste error eos est praesentium distinctio cupiditate 
+                 tempore suscipit inventore deserunt tenetur.</p>
+        </div>
+        <div class="main-3-section-grid3"> 
+            <img src="img/person_2.jpg" alt="">
+            <h3>Christine Rooster</h3>
+            <p>Co-Founder, President</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Nisi at consequatur unde molestiae quidem provident voluptatum 
+                 deleniti quo iste error eos est praesentium distinctio cupiditate 
+                 tempore suscipit inventore deserunt tenetur.</p>
+        </div>
+    </div>
+   </main>
+    <!-- footer -->
+
+    <div class=" my-0">
+
+        <footer class=" text-center text-lg-start text-white" style="background-color: rgba(27, 25, 25, 0.992);">
+            <!-- Grid container -->
+            <div class="container-fluid p-4 pb-0">
+                <!-- Section: Links -->
+                <section class="">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">
+                                <img src="img/logo.png" alt="" style="height: 200px;width: 200px;">
+                            </h6>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Quick links</h6>
+                            <p>
+                                <a class="text-white" href="index.html">home</a>
+                            </p>
+                            <p>
+                                <a class="text-white" href="aboutus.html">about us</a>
+                            </p>
+                            <p>
+                                <a class="text-white" href="contactus.html">contact us</a>
+                            </p>
+                            <p>
+                                <a class="text-white" href="blog.html">Blog</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                            <p><i class="fas fa-home mr-3"></i> baloch colony ,karachi</p>
+                            <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                            <p><i class="fas fa-phone mr-3"></i> + 923272514601</p>
+                            <p><i class="fas fa-print mr-3"></i> + 923062545569</p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+
+                            <!-- Facebook -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #000" href="https://www.facebook.com/profile.php?id=61563417562936&mibextid=ZbWKwL
+            " role="button"><i class="fab fa-facebook-f"></i></a>
+
+                            <!-- Twitter -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #000" href="#!"
+                                role="button"><i class="fab fa-twitter"></i></a>
+
+                            <!-- Google -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #000" href="#!"
+                                role="button"><i class="fab fa-linkedin-in"></i></a>
+
+                            <!-- Instagram -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #000"
+                                href="https://www.instagram.com/speedycourier1?igsh=MWsweGlvYmg5cnVuaw=="
+                                role="button"><i class="fab fa-instagram"></i></a>
+
+
+                        </div>
+                    </div>
+                    <!--Grid row-->
+                </section>
+                <!-- Section: Links -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(27, 25, 25, 0.852)">
+                © 2024 Copyright || speedycourier
+
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </div>
+
+    <!-- End of .container -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script>
+        //navbar code//
+        const sidebar = document.querySelector('.sidebar')
+        function show() {
+            sidebar.style.right = "0"
+
+        }
+        function hide() {
+
+            sidebar.style.right = "-500px"
+        }
+        //navbarcode end//
+     
+        //carasoul code end//
+    </script>
+</body>
+
+</html>

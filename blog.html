@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/6235e3a363.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>SPEEDY</title>
+    <link rel="icon" href="img/logo-title.png" type="image/icon type">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        header {
+            width: 100%;
+            height: 120px;
+        }
+
+        header .top-head {
+            height: 30px;
+            width: 100%;
+            background-color: #fd831f;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 2px 5px;
+        }
+
+        header .bottom-head {
+            height: 80%;
+            width: 100%;
+            background-color: #f1f1f1;
+        }
+
+        /*navbar css*/
+
+
+        nav {
+
+            font-size: 15px;
+            color: black;
+            height: 100%;
+            width: 100%;
+            text-align: end;
+            padding-right: 100px;
+
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 50px
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(12, 12, 12);
+            margin: 10px 15px;
+            padding: 6px;
+        }
+
+        nav ul li a:hover {
+
+            color: #fd831f;
+            border-radius: 1px;
+        }
+
+        input {
+            margin: 12px;
+            height: 25px;
+            border-radius: 5px;
+        }
+
+        label {
+            font-size: 20px;
+            margin-top: 15px;
+        }
+
+        .navbar-li {
+            line-height: 100px;
+
+        }
+
+        .sidebar {
+            background-color: #ffffff;
+            color: black;
+            width: 300px;
+            height: 62vh;
+            position: fixed;
+            top: 32px;
+            right: -500px;
+            border-radius: 5px;
+            transition: 0.6s ease-in-out;
+            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
+
+        .sidebar li a {
+            color: black;
+        }
+
+        .sedebar-li {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .sedebar-li a {
+            width: 100%;
+            text-align: center;
+            margin: 10px 0px;
+        }
+
+        .menu-btn {
+
+            cursor: pointer;
+            margin: 20px;
+
+        }
+
+        .menubtn-1 {
+
+            display: none;
+        }
+
+        .logo {
+            height: 150px;
+            width: 200px;
+            position: absolute;
+            left: 8vw;
+            top: 7px
+        }
+
+        .logo img {
+            height: 150px;
+            width: 200px;
+        }
+
+        @media(max-width: 800px) {
+            nav {
+                padding-right: 0px;
+            }
+
+            .menu-btn {
+                display: inline-block;
+            }
+
+            .menubtn-1 {
+                margin: 40px;
+
+            }
+
+            .navbar-li {
+                display: none;
+            }
+        }
+
+        /*navbar css end*/
+        /*main syling*/
+        main{
+        padding: 2px 20px;
+        background-color: white;
+        padding-bottom: 50px;
+    }
+    .blog-intro {
+text-align: center;
+padding: 2em 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 80px; /* Adjust based on header height */
+}
+.buttn{
+    background-color: #fd831f;
+    width: 100px;
+    height: 5px;
+    border-radius: 10px;
+}
+
+.blog-posts {
+display: flex;
+flex-direction: column;
+gap: 2em;
+margin: 2em auto;
+max-width: 800px;
+}
+
+.post {
+background: white;
+padding: 2em;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+}
+
+.post h2 {
+margin-top: 0;
+}
+
+.post p {
+color: #666;
+}
+
+.post .btn {
+margin-top: 1em;
+display: inline-block;
+text-decoration: none;
+color: white;
+background-color: #fd831f;
+padding: 10px 15px;
+border-radius: 5px;
+}
+.hero-section{
+    background-image: url(img/blog.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    top: 0px;
+}
+.hero-section-slogan{
+   
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-head">
+            <div class="phone-head">
+                <p><i class="fa-solid fa-phone"></i>+923062545569</p>
+            </div>
+            <div class="icon-head">
+
+                <p><i class=" fa-brands fa-facebook" style="color: #ffffff;"></i>
+                    <i class=" fa-brands fa-instagram"></i>
+                    <i class=" fa-brands fa-linkedin"></i>
+                </p>
+            </div>
+        </div>
+        <div class="bottom-head">
+            <nav>
+                <ul>
+                    <li>
+                        <div class="logo"><img src="img/logo.png" alt="">
+                    </li>
+                    <li class="navbar-li"><a href="index.html" >HOME</a></li>
+                    <li class="navbar-li"><a href="blog.html" style="color:#fd831f;">BLOG</a></li>
+                    <li class="navbar-li"><a href="aboutus.html">ABOUT US</a></li>
+                    <li class="navbar-li"><a href="contactus.html">CONTACT US</a></li>
+                    <label for="click" class="menu-btn menubtn-1" onclick="show()"><i
+                            class="fa-solid fa-bars bar"></i></label>
+                </ul>
+                <ul class="sidebar">
+                    <label for="click" class="menu-btn menubtn-2 " onclick="hide()"><i
+                            class="fa-solid fa-xmark xmark"></i></label>
+                    <li class="sedebar-li"><a href="index.html">HOME</a></li>
+                    <li class="sedebar-li"><a href="blog.html">BLOG</a></li>
+                    <li class="sedebar-li"><a href="aboutus.html">ABOUT US</a></li>
+                    <li class="sedebar-li"><a href="contactus.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="hero-section"></div>
+    <div class="hero-section-slogan">
+        <h1 style="font-size: 70px; font-weight: normal;"><b>OUR BLOG</b></h1>
+        <P style="color: rgb(192, 190, 190);"> <span style="color: #fd831f;">HOME</span> > Blog</P>
+    </div>
+    
+    <main>
+    
+        <section class="blog-intro">
+            <h1 style="color: #fd831f;">Our Blog</h1>
+            <p>Stay updated with the latest news and updates from Speedy.</p>
+            <div class="buttn"></div>
+        </section>
+    
+        <section class="blog-posts">
+            <article class="post">
+                <h2>How to Choose the Best Shipping Service</h2>
+                <p>Posted on: July 15, 2024</p>
+                <p>Choosing the best shipping service can be a daunting task. Here are some tips to help you make the right decision.</p>
+                <a href="#" class="btn">Read More</a>
+            </article>
+            <article class="post">
+                <h2>Top 5 Tips for Efficient Logistics Management</h2>
+                <p>Posted on: July 10, 2024</p>
+                <p>Efficient logistics management is crucial for the success of any business. Follow these top tips to streamline your logistics process.</p>
+                <a href="#" class="btn">Read More</a>
+            </article>
+            <article class="post">
+                <h2>The Future of Shipping and Logistics</h2>
+                <p>Posted on: July 5, 2024</p>
+                <p>The shipping and logistics industry is constantly evolving. Discover the latest trends and innovations shaping the future.</p>
+                <a href="#" class="btn">Read More</a>
+            </article>
+        </section>
+    </main>
+   
+    <!-- footer -->
+
+    <div class=" my-0">
+
+        <footer class=" text-center text-lg-start text-white" style="background-color: rgba(27, 25, 25) ;">
+            <!-- Grid container -->
+            <div class="container-fluid p-4 pb-0">
+                <!-- Section: Links -->
+                <section class="">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">
+                                <img src="img/logo.png" alt="" style="height: 200px;width: 200px;">
+                            </h6>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Quick links</h6>
+                            <p>
+                                <a class="text-white" href="index.html">home</a>
+                            </p>
+                            <p>
+                                <a class="text-white" href="aboutus.html">about us</a>
+                            </p>
+                            <p>
+                                <a class="text-white" href="contactus.html">contact us</a>
+                            </p>
+                            <p>
+                                <a class="text-white" href="blog.html">Blog</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                            <p><i class="fas fa-home mr-3"></i> baloch colony ,karachi</p>
+                            <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                            <p><i class="fas fa-phone mr-3"></i> + 923272514601</p>
+                            <p><i class="fas fa-print mr-3"></i> + 923062545569</p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+
+                            <!-- Facebook -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #000" href="https://www.facebook.com/profile.php?id=61563417562936&mibextid=ZbWKwL
+            " role="button"><i class="fab fa-facebook-f"></i></a>
+
+                            <!-- Twitter -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #000" href="#!"
+                                role="button"><i class="fab fa-twitter"></i></a>
+
+                            <!-- Google -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #000" href="#!"
+                                role="button"><i class="fab fa-linkedin-in"></i></a>
+
+                            <!-- Instagram -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #000"
+                                href="https://www.instagram.com/speedycourier1?igsh=MWsweGlvYmg5cnVuaw=="
+                                role="button"><i class="fab fa-instagram"></i></a>
+
+
+                        </div>
+                    </div>
+                    <!--Grid row-->
+                </section>
+                <!-- Section: Links -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(27, 25, 25, 0.852)">
+                © 2024 Copyright || speedycourier
+
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </div>
+
+    <!-- End of .container -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script>
+        //navbar code//
+        const sidebar = document.querySelector('.sidebar')
+        function show() {
+            sidebar.style.right = "0"
+
+        }
+        function hide() {
+
+            sidebar.style.right = "-500px"
+        }
+        //navbarcode end//
+     
+        //carasoul code end//
+    </script>
+</body>
+
+</html>

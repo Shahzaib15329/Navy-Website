@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/6235e3a363.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>SPEEDY</title>
+    <link rel="icon" href="img/logo-title.png" type="image/icon type">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            
+            
+        }
+
+        header {
+            width: 100%;
+            height: 120px;
+        }
+
+        header .top-head {
+            height: 30px;
+            width: 100%;
+            background-color: #fd831f;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 2px 5px;
+        }
+
+        header .bottom-head {
+            height: 80%;
+            width: 100%;
+            background-color: #f1f1f1;
+        }
+
+        /*navbar css*/
+
+
+        nav {
+
+            font-size: 15px;
+            color: black;
+            height: 100%;
+            width: 100%;
+            text-align: end;
+            padding-right: 100px;
+
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 50px
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(12, 12, 12);
+            margin: 10px 15px;
+            padding: 6px;
+        }
+
+        nav ul li a:hover {
+
+            color: #fd831f;
+            border-radius: 1px;
+        }
+
+        input {
+            margin: 12px;
+            height: 25px;
+            border-radius: 5px;
+        }
+
+        label {
+            font-size: 20px;
+            margin-top: 15px;
+        }
+
+        .navbar-li {
+            line-height: 100px;
+
+        }
+
+        .sidebar {
+            background-color: #ffffff;
+            color: black;
+            width: 300px;
+            height: 62vh;
+            position: fixed;
+            top: 32px;
+            right: -500px;
+            border-radius: 5px;
+            transition: 0.6s ease-in-out;
+            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
+
+        .sidebar li a {
+            color: black;
+        }
+
+        .sedebar-li {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .sedebar-li a {
+            width: 100%;
+            text-align: center;
+            margin: 10px 0px;
+        }
+
+        .menu-btn {
+
+            cursor: pointer;
+            margin: 20px;
+
+        }
+
+        .menubtn-1 {
+
+            display: none;
+        }
+
+        .logo {
+            height: 150px;
+            width: 200px;
+            position: absolute;
+            left: 8vw;
+            top: 7px
+        }
+
+        .logo img {
+            height: 150px;
+            width: 200px;
+        }
+
+        @media(max-width: 800px) {
+            nav {
+                padding-right: 0px;
+            }
+
+            .menu-btn {
+                display: inline-block;
+            }
+
+            .menubtn-1 {
+                margin: 40px;
+
+            }
+
+            .navbar-li {
+                display: none;
+            }
+        }
+
+        /*navbar css end*/
+        /*hero-section css*/
+
+        .hero-section {
+            
+            position: fixed;
+            z-index: -1;
+            top: 0px;
+            height: 100vh;
+            
+            overflow-x: auto;
+        }
+
+        .hero-section-slogan {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            height: 90vh;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .ship-now-btn {
+            width: 180px;
+            height: 55px;
+            border: none;
+            background-color: #fd831f;
+            color: white;
+            transition: 20ms;
+            letter-spacing: 2px;
+        }
+
+        .ship-now-btn:hover {
+            border: 2px solid white;
+            background-color: rgba(253, 250, 250, 0);
+        }
+
+        .main-section {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 0px;
+            flex-direction: column;
+        }
+
+        .main-section h1 {
+            color: #fd831f;
+            text-align: center;
+        }
+
+        .main-section-button {
+            border-radius: 10px;
+            border: none;
+            width: 100px;
+            height: 6px;
+            background-color: #fd831f;
+        }
+
+        .what-we-offer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0px;
+            padding: 10px 0px;
+            width: 100%;
+        }
+
+        .what-we-offer1,
+        .what-we-offer2 {
+        
+
+            
+
+            display: flex;
+            padding: 50px 30px;
+        }
+
+        .m-icon {
+            border: 1px solid gray;
+            font-size: 40px;
+            border-radius: 70%;
+            padding: 20px;
+            margin: 20px;
+            color: #fd831f;
+        }
+        .main-text{
+            padding: 2px 5px;
+        }
+        
+
+        .main-section a {
+            text-decoration: none;
+            color: #fd831f;
+            font-size: 17px;
+            text-transform: capitalize;
+        }
+
+        .main-section a:hover {
+            color: rgb(24, 8, 39);
+        }
+
+        .main-section-container-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+          overflow-x: auto;
+            padding: 50px 0px;
+            position: relative;
+
+        }
+
+        .container-grid {
+           
+            display: flex;
+
+            padding: 30px 10px;
+        }
+
+        /*carasoul css*/
+        .carasoul-div {
+            display: flex;
+            height: 450px;
+            align-items: center;
+            justify-content: center;
+            margin: 0px 50px;
+
+        }
+
+        .wrapper {
+
+            width: 100%;
+            position: relative;
+
+
+        }
+
+        .wrapper i {
+            top: 50%;
+            height: 50px;
+            width: 50px;
+            cursor: pointer;
+            font-size: 1.25rem;
+            position: absolute;
+            text-align: center;
+            line-height: 50px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+            transform: translateY(-50%);
+            transition: transform 0.1s linear;
+        }
+
+        .wrapper i:active {
+            transform: translateY(-50%) scale(0.85);
+        }
+
+        .wrapper i:first-child {
+            left: -22px;
+        }
+
+        .wrapper i:last-child {
+            right: -22px;
+        }
+
+        .wrapper .carousel {
+
+            width: 100%;
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: calc((100% / 4) + 7px);
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 1px;
+
+
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .carousel.no-transition {
+            scroll-behavior: auto;
+        }
+
+        .carousel.dragging {
+            scroll-snap-type: none;
+            scroll-behavior: auto;
+        }
+
+        .carousel.dragging .card {
+            cursor: grab;
+            user-select: none;
+        }
+
+        .carousel :where(.card, .img) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel .card {
+            scroll-snap-align: start;
+            height: 450px;
+            list-style: none;
+            background: #fff;
+            cursor: pointer;
+            padding-bottom: 15px;
+            flex-direction: column;
+
+            background-size: cover;
+        }
+
+        .carousel .i1 {
+            background-image: url(img/img_1.jpg);
+            background-size: cover;
+        }
+
+
+
+        .carousel .i2 {
+            background-image: url(img/img_2.jpg);
+        }
+
+        .carousel .i3 {
+            background-image: url(img/img_3.jpg);
+        }
+
+        .carousel .i4 {
+            background-image: url(img/img_4.jpg);
+        }
+
+        .carousel .i5 {
+            background-image: url(img/img_5.jpg);
+        }
+
+        .carousel h2 {
+            font-weight: 500;
+            font-size: 1.56rem;
+            margin: 30px 0 5px;
+            color: #fff;
+            margin-top: 230px;
+        }
+
+        .carousel .card span {
+            display: none;
+        }
+
+
+        .carousel .card span {
+            color: #a8a8aa;
+            font-size: 1.31rem;
+        }
+
+        .div-9-grid {
+            background-color: #f1f1f1;
+            margin-top: 70px;
+            padding: 70px 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+
+        }
+
+        .heading {
+            text-align: center;
+            color: #454343;
+            font-size: 30px;
+            font-weight: 700;
+            position: relative;
+            margin-bottom: 70px;
+            text-transform: uppercase;
+            z-index: 999;
+        }
+
+
+        .heading span {
+            font-size: 18px;
+            display: block;
+            font-weight: 500;
+        }
+
+        .white-heading span {
+            color: #151414;
+        }
+
+        /*-----Testimonial-------*/
+        .testimonial:after {
+            position: absolute;
+            top: 0 !important;
+            left: 0;
+            content: " ";
+            /* background: url(img/testimonial.bg-top.png); */
+            background-size: 100% 100px;
+            width: 100%;
+            height: 100px;
+            float: left;
+            z-index: 99;
+        }
+
+        .testimonial {
+            min-height: 375px;
+            position: relative;
+            /* background: url(https://i.ibb.co/PTJDkgb/testimonials.jpg); */
+            background-color: white;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background-position: center;
+            background-size: cover;
+        }
+
+        #testimonial4 .carousel-inner:hover {
+            cursor: -moz-grab;
+            cursor: -webkit-grab;
+        }
+
+        #testimonial4 .carousel-inner:active {
+            cursor: -moz-grabbing;
+            cursor: -webkit-grabbing;
+        }
+
+        #testimonial4 .carousel-inner .carousel-item {
+            overflow: hidden;
+        }
+
+        .testimonial4_indicators .carousel-indicators {
+            left: 0;
+            margin: 0;
+            width: 100%;
+            font-size: 0;
+            height: 20px;
+            bottom: 15px;
+            padding: 0 5px;
+            cursor: e-resize;
+            overflow-x: auto;
+            overflow-y: hidden;
+            position: absolute;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .testimonial4_indicators .carousel-indicators li {
+            padding: 0;
+            width: 14px;
+            height: 14px;
+            border: none;
+            text-indent: 0;
+            margin: 2px 3px;
+            cursor: pointer;
+            display: inline-block;
+            background: #ffffff;
+
+        }
+
+        .testimonial4_indicators .carousel-indicators .active {
+            padding: 0;
+            width: 14px;
+            height: 14px;
+            border: none;
+            margin: 2px 3px;
+            background-color: #9dd3af;
+
+        }
+
+        .testimonial4_indicators .carousel-indicators::-webkit-scrollbar {
+            height: 3px;
+        }
+
+        .testimonial4_indicators .carousel-indicators::-webkit-scrollbar-thumb {
+            background: #0c0c0c;
+            border-radius: 0;
+        }
+
+        .testimonial4_control_button .carousel-control-prev,
+        .testimonial4_control_button .carousel-control-next {
+            top: 50%;
+            opacity: 1;
+            width: 60px;
+            bottom: auto;
+            height: 60px;
+            font-size: 10px;
+            cursor: pointer;
+            font-weight: 700;
+            overflow: hidden;
+            line-height: 38px;
+            text-shadow: none;
+            text-align: center;
+            position: absolute;
+            background: transparent;
+            background-color: #454343;
+            border-radius: 30px;
+            text-transform: uppercase;
+            transition: 10ms;
+
+            box-shadow: none;
+            transition: all 0.6s cubic-bezier(0.3, 1, 0, 1);
+        }
+
+        .testimonial4_control_button .carousel-control-prev:hover,
+        .testimonial4_control_button .carousel-control-next:hover {
+            background-color: #0b0b0b;
+        }
+
+        .testimonial4_control_button .carousel-control-prev {
+            left: 7%;
+        }
+
+        .testimonial4_control_button .carousel-control-next {
+            right: 7%;
+        }
+
+        /* .testimonial4_control_button .carousel-control-prev:hover,
+    .testimonial4_control_button .carousel-control-next:hover {
+        color: #000;
+        background: #fff;
+        border: 2px solid #fff; 
+    }*/
+        .testimonial4_header {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 550px;
+            display: block;
+            margin: 30px auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .testimonial4_header h4 {
+            color: #0b0b0b;
+            font-size: 30px;
+            font-weight: 600;
+            position: relative;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .testimonial4_slide {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 70%;
+            margin: auto;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        .testimonial4_slide img {
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 136px;
+            height: 136px;
+            margin: auto;
+            display: block;
+
+            font-size: 18px;
+            line-height: 46px;
+            text-align: center;
+            position: relative;
+            border-radius: 50%;
+            box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        .testimonial4_slide p {
+            color: #888889;
+            ;
+            font-size: 16px;
+            line-height: 1.4;
+            margin: 40px 0 20px 0;
+        }
+
+        .testimonial4_slide h4 {
+            color: #a8a8aa;
+            ;
+            font-size: 19px;
+        }
+
+        .testimonial .carousel {
+            padding-bottom: 50px;
+        }
+
+        .testimonial .carousel-control-prev-icon,
+        .testimonial .carousel-control-next-icon {
+
+            width: 30px;
+            height: 30px;
+
+            border-radius: 100%;
+            padding: 10px;
+
+        }
+        .ug2{
+            padding-bottom: 100px;
+        }
+
+        @media screen and (max-width: 1100px) {
+            .wrapper .carousel {
+                grid-auto-columns: calc((100% / 3) + 10px);
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .wrapper .carousel {
+                grid-auto-columns: calc((100% / 2) + 15px);
+            }
+            .ug1{
+                padding-bottom: 100px;
+            }
+        }
+            @media screen and (max-width: 870px) {
+            .ug2{
+                padding-bottom: 200px;
+            }
+             
+
+        }
+
+        @media screen and (max-width: 600px) {
+            .wrapper .carousel {
+                grid-auto-columns: 110%;
+            }
+
+            .div-9-grid {
+                padding: 70px 10px;
+            }
+        }
+
+
+
+
+
+        @media (max-width: 850px) {
+
+            .what-we-offer {
+                flex-direction: column;
+
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .main-section-container-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .what-we-offer1,
+            .what-we-offer2 {
+                width: 40vh;
+                padding: 50px 0px;
+            }
+        }
+
+        @media (max-width:700px) {
+            .main-section-container-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .whatsapp-icon {
+
+            background-color: rgb(5, 161, 5);
+            position: fixed;
+            z-index: 2;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 40px;
+            padding: 10px 14px;
+            cursor: pointer;
+
+        }
+
+        .fixed-icon {
+            color: white;
+            font-size: 40px;
+        }
+        @media(max-width:375px) {
+            .maint-text{
+                padding: 2px 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-head">
+            <div class="phone-head">
+                <p><i class="fa-solid fa-phone"></i>+923062545569</p>
+            </div>
+            <div class="icon-head">
+
+                <p><i class=" fa-brands fa-facebook" style="color: #ffffff;"></i>
+                    <i class=" fa-brands fa-instagram"></i>
+                    <i class=" fa-brands fa-linkedin"></i>
+                </p>
+            </div>
+        </div>
+        <div class="bottom-head">
+            <nav>
+                <ul>
+                    <li>
+                        <div class="logo"><img src="img/logo.png" alt="">
+                    </li>
+                    <li class="navbar-li"><a href="index.html" style="color:#fd831f;">HOME</a></li>
+                    <li class="navbar-li"><a href="blog.html">BLOG</a></li>
+                    <li class="navbar-li"><a href="aboutus.html">ABOUT US</a></li>
+                    <li class="navbar-li"><a href="contactus.html">CONTACT US</a></li>
+                    <label for="click" class="menu-btn menubtn-1" onclick="show()"><i
+                            class="fa-solid fa-bars bar"></i></label>
+                </ul>
+                <ul class="sidebar">
+                    <label for="click" class="menu-btn menubtn-2 " onclick="hide()"><i
+                            class="fa-solid fa-xmark xmark"></i></label>
+                    <li class="sedebar-li"><a href="index.html">HOME</a></li>
+                    <li class="sedebar-li"><a href="blog.html">BLOG</a></li>
+                    <li class="sedebar-li"><a href="aboutus.html">ABOUT US</a></li>
+                    <li class="sedebar-li"><a href="contactus.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- BODY -->
+    <section>
+        <div class="hero-section">
+            <video src="img/container.mp4" autoplay muted loop ></video>
+
+        </div>
+        <div class="hero-section-slogan">
+            <h1 style="font-size: 65px;"><b>ONE STOP SOLUTION</b></h1>
+            <P style="font-size: 20px;"><b>All your courier and cargo needs catered</b></P>
+            <button class="ship-now-btn">SHIP NOW!</button>
+        </div>
+    </section>
+    <main class="main-section">
+        <h1>What We Offer</h1>
+        <p>Possibility in Every Direction</p>
+        <button class="main-section-button"></button>
+        <div class="what-we-offer " >
+            <div class="what-we-offer1"style=" width: 100%; ">
+                <div class="main-icon">
+                    <i class="fa-solid fa-plane-departure m-icon"></i>
+                </div>
+                <div class="main-text" style="margin-top: 20px;">
+                    <h5>Express</h5>
+                    <ul>
+                        <li>International Cargo (Delivers max in 4 - 6 days).</li>
+                        <li>International Courier (Delivers max in 4 - 6 days).
+                        </li>
+                        <li>
+                            Domestic Cargo (Delivers max in 2 - 3 days).
+                        </li>
+                        <li>Domestic Courier (Delivers max in 1 - 2 days).</li>
+
+                    </ul>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+            <div class="what-we-offer2"style="  width: 100%; ">
+                <div class="main-icon">
+                    <i class="fa-solid fa-truck-fast m-icon"></i>
+                </div>
+                <div class="main-text" style="margin-top: 20px;">
+                    <h5>Economy</h5>
+                    <ul>
+                        <li>International Cargo (Delivers max in 7 - 9 days).</li>
+                        <li>International Courier (Delivers max in 7 - 9 days)</li>
+                        <li>Domestic Cargo (Delivers max in 4 - 5 days).</li>
+                        <li>Domestic Courier (Delivers max in 4 - 5 days).</li>
+                        <li>OCEAN FRIEGHT (variable)</li>
+                        <li>ROAD FRIEGHT (variable)</li>
+
+                    </ul>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+        <h1>How speedy helps you with the<br> services </h1>
+        <button class="main-section-button"></button>
+        <div class="main-section-container-grid">
+            <div class="container-grid">
+                <div class="main-icon">
+                    <i class="fa-solid fa-money-bill-1-wave  m-icon"></i>
+                </div>
+                <div class="main-text" style="margin-top: 20px;">
+                    <h5>Competitive pricing</h5>
+                    <p>We provide SMEs with access to bulk-buying discounts they can't obtain on their own.</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+            <div class="container-grid">
+                <div class="main-icon">
+                    <i class="fa-solid fa-user-tie  m-icon"></i>
+                </div>
+                <div class="main-text" style="margin-top: 20px;">
+                    <h5>Less admin</h5>
+                    <p>Our shipping platform offers a one- stop shop for multiple carriers - but you only get ONE
+                        invoice.</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+            <div class="container-grid">
+                <div class="main-icon">
+                    <i class="fa-solid fa-circle-exclamation  m-icon"></i>
+                </div>
+                <div class="main-text" style="margin-top: 20px;">
+                    <h5>We deal with any problem</h5>
+                    <p>If there are any issues during the shipping process, Speedy will find the solution while
+                        you carry on working.</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="carasoul-div">
+            <div class="wrapper">
+                <i id="left" class="fa-solid fa-angle-left" style="z-index: 1;"></i>
+                <ul class="carousel">
+
+                    <li class="card i1">
+                        <h2>Joenas Brauers</h2>
+                        <span>Web Developer</span>
+                    </li>
+                    <li class="card i2">
+                        <h2>Lariach French</h2>
+                        <span>Online Teacher</span>
+                    </li>
+                    <li class="card i3">
+                        <h2>James Khosravi</h2>
+                        <span>Freelancer</span>
+                    </li>
+                    <li class="card i4">
+                        <h2>Kristina Zasiadko</h2>
+                        <span>Bank Manager</span>
+                    </li>
+                    <li class="card i5">
+
+                        <h2>Donald Horton</h2>
+                        <span>App Designer</span>
+                    </li>
+                </ul>
+                <i id="right" class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+        <!-- 9 div grid -->
+        <div class="div-9-grid">
+            <h1>INTRODUCING THE NEXT GEN OF <br>SHIPPING TOOLS </h1>
+            <button class="main-section-button"></button>
+            <div class="main-section-container-grid ug1">
+                <div class="container-grid">
+                    <div class="main-icon">
+                        <i class="fa-solid fa-user-group  m-icon"></i>
+                    </div>
+                    <div class="main-text" style="margin-top: 20px;">
+                        <h4>Get yourself registered at Speedy to start shipping today</h4>
+
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+                <div class="container-grid">
+                    <div class="main-icon">
+                        <i class="fa-solid fa-right-from-bracket  m-icon"></i>
+                    </div>
+                    <div class="main-text" style="margin-top: 20px;">
+                        <h4>Login into your account to book and manage shipments
+                        </h4>
+
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+                <div class="container-grid">
+                    <div class="main-icon">
+                        <i class="fa-solid fa-calculator  m-icon"></i>
+                    </div>
+                    <div class="main-text" style="margin-top: 20px;">
+                        <h4>Now calculate and create your shipments according to your needs</h4>
+
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+                <div class="container-grid">
+                    <div class="main-icon">
+                        <i class="fa-solid fa-weight-hanging  m-icon"></i>
+                    </div>
+                    <div class="main-text" style="margin-top: 20px;">
+                        <h4>Add the actual weight of your product and choose the destination country</h4>
+
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+                <div class="container-grid">
+                    <div class="main-icon">
+                        <i class="fa-solid fa-truck-ramp-box  m-icon"></i>
+                    </div>
+                    <div class="main-text" style="margin-top: 20px;">
+                        <h4> Select the shipping service of your choice and tap “Ship”</h4>
+
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+                <div class="container-grid">
+                    <div class="main-icon">
+                        <i class="fa-solid fa-square-check  m-icon"></i>
+                    </div>
+                    <div class="main-text" style="margin-top: 20px;">
+                        <h4>Click the button finalize shipment to confirm your shipping, and within the next five
+                            minutes you will get your tracking ID on your mobile/email.</h4>
+
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- new-grid -->
+            <h1 class="uh1" style="margin-top:50px; font-size: 30px; font-weight:bolder;">E-SHIPPING MAKE YOU THINK LESS</h1>
+            <p style="text-align: center; padding: 10px 30px; color: #a8a8aa;font-size: 17px;">Reliability is incredibly
+                important, both for your business and your customers. It’s<br> even more crucial when you’re dealing
+                with high volumes of deliveries and a <br>wide range of goods. We’ve created E-Shipping our unique
+                proprietary.platform,<br> to
+                make the whole shipping process as simple as possible. In fact, it’s been<br> designed specifically
+                around the needs of busy
+                people like you, so you can <br>focus on other things.</p>
+            <button class="main-section-button"></button>
+
+            <!-- new-grid -->
+            <div class="main-section-container-grid ug2"  >
+                <div class="container-grid" style="margin: 150px 0px;">
+                    <div class="main-icon">
+                        <i class="fa-solid fa-hand-holding-dollar m-icon"> </i>
+                    </div>
+                    <div class="main-text" style="margin-top: 20px;">
+                        <h5>DISCOVER POSSIBILITIES WITH SIMPLIFIED Speedy IMPORT RATES</h5>
+                        <p>Take advantage of this new opportunity to grow your business.
+                            With simplified Import Pricing offered by Speedy, you can
+                            now export with ease and without the worry of exchange rate
+                            risk when paying offshore.</p>
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+                <div class="container-grid" style="margin: 150px 0px;">
+                    <div class="main-icon">
+                        <i class="fa-solid fa-people-carry-box  m-icon"></i>
+                    </div>
+                    <div class="main-text" style="margin-top: 20px;">
+                        <h5>WHATEVER YOUR NEED WE HAVE THE RIGHT SERVICE FOR YOU</h5>
+                        <p>Whether you process one or one thousand shipments a day, we’ve got a service for you.
+                            By partnering with world class carriers and with the expertise of our very own Global
+                            Shipping Specialists,
+                            we’ve got the global scale and leading software to get your delivery where it needs to be.
+                        </p>
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+                <div class="container-grid" style="margin: 150px 0px;">
+                    <div class="main-icon">
+                        <i class="fa-solid fa-truck  m-icon"></i>
+                    </div>
+                    <div class="main-text" style="margin-top: 20px;">
+                        <h5>
+                            CUSTOMIZED SERVICE</h5>
+                        <p>A customized service you receive individualized service from our global network
+                            of franchisees, who collaborate with you as a strategic business partner and
+                            an advocate for cost savings. When you work with Speedy, you can be sure that
+                            everything will be shipped with just one call, including documents, packages,
+                            pallets, and crates.</p>
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <!-- testimonials -->
+        <h1 style="margin-top:100px; font-size: 35px; font-weight:bolder;">TESTIMONIALS </h1>
+        <button class="main-section-button"></button>
+        <div class="testimonial-box">
+            <section class="testimonial text-center">
+                <div class="container">
+
+                    <div id="testimonial4"
+                        class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x"
+                        data-bs-ride="carousel" data-bs-pause="hover" data-bs-interval="5000" data-bs-duration="2000">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="testimonial4_slide">
+                                    <img src="img/person_1.jpg" class="img-circle img-responsive" />
+                                    <h4 style="margin-top: 30px; text-transform: capitalize; font-size: 20px;">john
+                                        smith</h4>
+                                    <p><i>"Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry's standard dummy text ever since the
+                                            1500s,
+                                            when an unknown printer took a galley of type and scrambled it to make a
+                                            type specimen book."</i></p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial4_slide">
+                                    <img src="img/person_2.jpg" class="img-circle img-responsive" />
+                                    <h4 style="margin-top: 30px; text-transform: capitalize; font-size: 20px;">robert
+                                        spears</h4>
+                                    <p><i>"Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry's standard dummy text ever since the
+                                            1500s,
+                                            when an unknown printer took a galley of type and scrambled it to make a
+                                            type specimen book."</i></p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial4_slide">
+                                    <img src="img/person_3.jpg" class="img-circle img-responsive" />
+                                    <h4 style="margin-top: 30px;  text-transform: capitalize; font-size: 20px;">cristine
+                                        aguilar</h4>
+                                    <p><i>"Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry's standard dummy text ever since the
+                                            1500s,
+                                            when an unknown printer took a galley of type and scrambled it to make a
+                                            type specimen book."</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#testimonial4" role="button" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#testimonial4" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <hr style="margin: 30px 20px; color: #454343; height: 1px; width: 95vw;">
+    </main>
+    <!-- footer -->
+
+    <div class=" my-0">
+
+        <footer class=" text-center text-lg-start text-white" style="background-color: rgba(27, 25, 25) ;">
+            <!-- Grid container -->
+            <div class="container-fluid p-4 pb-0">
+                <!-- Section: Links -->
+                <section class="">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">
+                                <img src="img/logo.png" alt="" style="height: 200px;width: 200px;">
+                            </h6>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Quick links</h6>
+                            <p>
+                                <a class="text-white" href="index.html">home</a>
+                            </p>
+                            <p>
+                                <a class="text-white" href="aboutus.html">about us</a>
+                            </p>
+                            <p>
+                                <a class="text-white" href="contactus.html">contact us</a>
+                            </p>
+                            <p>
+                                <a class="text-white" href="blog.html">Blog</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                            <p><i class="fas fa-home mr-3"></i> baloch colony ,karachi</p>
+                            <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                            <p><i class="fas fa-phone mr-3"></i> + 923272514601</p>
+                            <p><i class="fas fa-print mr-3"></i> + 923062545569</p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+
+                            <!-- Facebook -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #000" href="https://www.facebook.com/profile.php?id=61563417562936&mibextid=ZbWKwL
+            " role="button"><i class="fab fa-facebook-f"></i></a>
+
+                            <!-- Twitter -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #000" href="#!"
+                                role="button"><i class="fab fa-twitter"></i></a>
+
+                            <!-- Google -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #000" href="#!"
+                                role="button"><i class="fab fa-linkedin-in"></i></a>
+
+                            <!-- Instagram -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #000"
+                                href="https://www.instagram.com/speedycourier1?igsh=MWsweGlvYmg5cnVuaw=="
+                                role="button"><i class="fab fa-instagram"></i></a>
+
+
+                        </div>
+                    </div>
+                    <!--Grid row-->
+                </section>
+                <!-- Section: Links -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(27, 25, 25, 0.852)">
+                © 2024 Copyright || speedycourier
+
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+        <a href="https://api.whatsapp.com/send?phone=923272514601">
+            <div class="whatsapp-icon">
+                <i class="fa-brands fa-whatsapp fixed-icon"></i>
+            </div>
+        </a>
+    </div>
+
+    <!-- End of .container -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script>
+        //navbar code//
+        const sidebar = document.querySelector('.sidebar')
+        function show() {
+            sidebar.style.right = "0"
+
+        }
+        function hide() {
+
+            sidebar.style.right = "-500px"
+        }
+        //navbarcode end//
+        //carasoul code//
+        const wrapper = document.querySelector(".wrapper");
+        const carousel = document.querySelector(".carousel");
+        const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+        const arrowBtns = document.querySelectorAll(".wrapper i");
+        const carouselChildrens = [...carousel.children];
+
+        let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+
+       
+        let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+        carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+            carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+        });
+
+        
+        carouselChildrens.slice(0, cardPerView).forEach(card => {
+            carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+        });
+
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.offsetWidth;
+        carousel.classList.remove("no-transition");
+
+        
+        arrowBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+            });
+        });
+
+        const dragStart = (e) => {
+            isDragging = true;
+            carousel.classList.add("dragging");
+        
+            startX = e.pageX;
+            startScrollLeft = carousel.scrollLeft;
+        }
+
+        const dragging = (e) => {
+            if (!isDragging) return; 
+            carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+        }
+
+        const dragStop = () => {
+            isDragging = false;
+            carousel.classList.remove("dragging");
+        }
+
+        const infiniteScroll = () => {
+            
+            if (carousel.scrollLeft === 0) {
+                carousel.classList.add("no-transition");
+                carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+                carousel.classList.remove("no-transition");
+            }
+
+            else if (Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+                carousel.classList.add("no-transition");
+                carousel.scrollLeft = carousel.offsetWidth;
+                carousel.classList.remove("no-transition");
+            }
+
+            
+            clearTimeout(timeoutId);
+            if (!wrapper.matches(":hover")) autoPlay();
+        }
+
+        const autoPlay = () => {
+            if (window.innerWidth < 800 || !isAutoPlay) return; 
+        
+            timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+        }
+        autoPlay();
+
+        carousel.addEventListener("mousedown", dragStart);
+        carousel.addEventListener("mousemove", dragging);
+        document.addEventListener("mouseup", dragStop);
+        carousel.addEventListener("scroll", infiniteScroll);
+        wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+        wrapper.addEventListener("mouseleave", autoPlay);
+        //carasoul code end//
+    </script>
+</body>
+
+</html>
